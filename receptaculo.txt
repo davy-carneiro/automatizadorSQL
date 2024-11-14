@@ -1,53 +1,290 @@
-+----------+--------------+-----------------+----------------------+-----------+-------------+------------+
-| id_alias | fk_id_tabela | nome_coluna     | alias_c              | bol_ativo | chave_geral | pos_coluna |
-+----------+--------------+-----------------+----------------------+-----------+-------------+------------+
-|        1 |            2 | id_grupo        | Grupos               |         1 |           7 |          1 |
-|        2 |            1 | id_atalho       | Código               |         1 |           7 |          1 |
-|        3 |            1 | titulo          | Título               |         1 |           7 |          2 |
-|        4 |            2 | titulo          | Título               |         1 |           7 |          2 |
-|        5 |            2 | sigla           | Abreviação           |         1 |           7 |          3 |
-|        6 |            3 | cod_item        | Código               |         1 |           7 |          1 |
-|        7 |            3 | titulo          | Título               |         1 |           7 |          2 |
-|        8 |            3 | url             | Endereço             |         1 |           7 |          4 |
-|        9 |            3 | bol_ativo       | Ativo                |         1 |           7 |          5 |
-|       10 |            4 | cod_menu        | Código               |         1 |           7 |          1 |
-|       11 |            4 | titulo          | Título               |         1 |           7 |          2 |
-|       12 |            4 | bol_ativo       | Ativo                |         1 |           7 |          4 |
-|       13 |            5 | cod_noticia     | Código               |         1 |           7 |          1 |
-|       14 |            5 | titulo          | Título               |         1 |           7 |          2 |
-|       15 |            5 | url             | Endereço             |         1 |           7 |          4 |
-|       16 |            5 | date_           | Data da notícia      |         1 |           7 |          5 |
-|       17 |            5 | url_imagem      | Caminho do arquivo   |         1 |           7 |          7 |
-|       18 |            5 | desc_imagem     | Descrição do arquivo |         1 |           7 |          3 |
-|       19 |            5 | tamanho_noticia | Tamanho da notícia   |         1 |           7 |          8 |
-|       20 |            5 | bol_ativo       | Ativo                |         1 |           7 |          9 |
-|       21 |            6 | cod_servico     | Código               |         1 |           7 |          1 |
-|       22 |            6 | titulo          | Título               |         1 |           7 |          2 |
-|       23 |            6 | subtitulo       | Subtítulo            |         1 |           7 |          3 |
-|       24 |            6 | url             | Endereço             |         1 |           7 |          4 |
-|       25 |            6 | bol_ativo       | Ativo                |         1 |           7 |          6 |
-|       26 |            1 | atalhositem     | Menu de Atalhos      |         1 |           7 |          0 |
-|       27 |            2 | grupojudicial   | Grupos Judiciais     |         1 |           7 |          0 |
-|       28 |            3 | itemmenu        | Itens dos Menus      |         1 |           7 |          0 |
-|       29 |            4 | menugrupo       | Menus                |         1 |           7 |          0 |
-|       30 |            5 | noticiagrupo    | Notícias             |         1 |           7 |          0 |
-|       31 |            6 | servicogrupo    | Serviços             |         1 |           7 |          0 |
-|       32 |            1 | fk_cod_item     | Código do item       |         1 |           7 |          3 |
-|       33 |            1 | chave_geral     | Chave geral          |         0 |           7 |          0 |
-|       34 |            2 | chave_geral     | Chave geral          |         0 |           7 |          0 |
-|       35 |            3 | fk_cod_menu     | Menu pertencente     |         1 |           7 |          3 |
-|       36 |            3 | chave_geral     | Chave geral          |         0 |           7 |          0 |
-|       37 |            4 | fk_id_grupo     | Grupo pertencente    |         1 |           7 |          3 |
-|       38 |            4 | chave_geral     | Chave geral          |         0 |           7 |          0 |
-|       39 |            5 | fk_id_grupo     | Grupo pertencente    |         1 |           7 |          6 |
-|       40 |            5 | chave_geral     | Chave geral          |         0 |           7 |          0 |
-|       41 |            6 | fk_id_grupo     | Grupo pertencente    |         1 |           7 |          5 |
-|       42 |            6 | chave_geral     | Chave geral          |         0 |           7 |          0 |
-|       43 |            7 | id_alias        | Código do alias      |         0 |           7 |          0 |
-|       44 |            7 | fk_id_tabela    | Tabela pertencente   |         1 |           7 |          1 |
-|       45 |            7 | nome_coluna     | Nome da coluna       |         0 |           7 |          0 |
-|       46 |            7 | alias           | Apelidos             |         1 |           7 |          0 |
-|       47 |            7 | bol_ativo       | Ativo                |         0 |           7 |          3 |
-|       48 |            7 | chave_geral     | Chave geral          |         0 |           7 |          0 |
-|       49 |            7 | alias_c         | Título da coluna     |         1 |           7 |          2 |
-+----------+--------------+-----------------+----------------------+-----------+-------------+------------+
++--------+------------------------------------------------------------------------------------------------------+---------------------+---------------------+
+| codigo | localidade                                                                                           | created_at          | updated_at          |
++--------+------------------------------------------------------------------------------------------------------+---------------------+---------------------+
+|    205 | 1. Centro Judiciario de Solução de Conflitos                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    178 | 1. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     92 | 1. Juizado Especial Criminal                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      3 | 1. Secretaria Civel                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      4 | 1. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      6 | 1. Secretaria da Família                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      7 | 1. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    140 | 1. Secretaria da Infância e Juventude                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      5 | 1. Secretaria de Entorpecentes                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     94 | 1. Secretaria do Júri                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      8 | 1. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    257 | 1. Vara Cível de São José de Ribamar                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      9 | 1. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    260 | 1. Vara Criminal de São José de Ribamar                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     10 | 1. Vara da Família                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     11 | 1. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    139 | 1. Vara da Infância e Juventude                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      2 | 1. Vara de Entorpecentes                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     76 | 1. Vara de Execuções Penais                                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    263 | 1. Vara de Paço do Lumiar                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     90 | 1. Vara do Júri                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    142 | 1.Vara Especial Violência Doméstica e Familiar contra Mulher                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      1 | 10 Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    219 | 10 Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    254 | 10 Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    187 | 10. Juizado Especial Civel e das Relações de Consumo                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    220 | 10. Secretaria Cível                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    101 | 10. Secretaria Criminal                                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    256 | 10. Secretaria da Fazenda Publica                                                                    | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    103 | 11 Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    221 | 11 Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    104 | 11. Juizado Cível                                                                                    | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    188 | 11. Juizado Especial Civel e das Relações de Consumo                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    222 | 11. Secretaria Cível                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    102 | 11. Secretaria Criminal                                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    216 | 12 Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    189 | 12. Juizado Especial Civel e das Relações de Consumo                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    217 | 12. Secretaria Cível                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    214 | 13 Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    190 | 13. Juizado Especial Civel e das Relações de Consumo                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    215 | 13. Secretaria Civel                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    223 | 14 Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    266 | 14. Juizado Cível e das Relações de Consumo                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    224 | 14. Secretaria Cível                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    227 | 15 Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    238 | 15. Secretaria Cível                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    237 | 16 Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    149 | 16. Promotoria de Justiça Penal                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    239 | 16. Secretaria Cível                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    179 | 2. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    175 | 2. Juizado Especial Criminal                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     13 | 2. Secretaria Cível                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     14 | 2. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     16 | 2. Secretaria da Família                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     17 | 2. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    144 | 2. Secretaria da Infância e Juventude                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     15 | 2. Secretaria de Entorpecentes                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     88 | 2. Secretaria do Júri                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     18 | 2. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    258 | 2. Vara Cível de São José de Ribamar                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     19 | 2. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    261 | 2. Vara Criminal de São José de Ribamar                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     20 | 2. Vara da Família                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     21 | 2. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    143 | 2. Vara da Infância e Juventude                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     12 | 2. Vara de Entorpecentes                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    145 | 2. Vara de Execuções Penais                                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    264 | 2. Vara de Paço do Lumiar                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    100 | 2. Vara do Júri                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    286 | 2.Vara Especial Violência Doméstica e Familiar contra Mulher                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    180 | 3. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    177 | 3. Juizado Especial Criminal                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     22 | 3. Secretaria Cível                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     23 | 3. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     24 | 3. Secretaria da Família                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     25 | 3. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    170 | 3. Secretaria do Júri                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     26 | 3. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    259 | 3. Vara Cível de São José de Ribamar                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     27 | 3. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     28 | 3. Vara da Família                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     29 | 3. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    298 | 3. Vara de Paço do Lumiar                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    172 | 3. Vara do Júri                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    181 | 4. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     30 | 4. Secretaria Cível                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     31 | 4. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     32 | 4. Secretaria da Família                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     33 | 4. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    171 | 4. Secretaria do Júri                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     34 | 4. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     35 | 4. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     36 | 4. Vara da Família                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     37 | 4. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    173 | 4. Vara do Júri                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    182 | 5. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     38 | 5. Secretaria Cível                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     39 | 5. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     40 | 5. Secretaria da Família                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     41 | 5. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     42 | 5. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     43 | 5. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     44 | 5. Vara da Família                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     45 | 5. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    183 | 6. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     46 | 6. Secretaria Cível                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     47 | 6. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     95 | 6. Secretaria da Família                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     48 | 6. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     49 | 6. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     50 | 6. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     96 | 6. Vara da Família                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     51 | 6. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    184 | 7. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     52 | 7. Secretaria Cível                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     53 | 7. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     98 | 7. Secretaria da Família                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     54 | 7. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     55 | 7. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     56 | 7. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     99 | 7. Vara da Família                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     57 | 7. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    185 | 8. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     58 | 8. Secretaria Cível                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     59 | 8. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     60 | 8. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     61 | 8. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     62 | 8. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     63 | 8. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    186 | 9. Juizado Especial Civel e das Relações de Consumo                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    116 | 9. Secretaria Civel                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     64 | 9. Secretaria Criminal                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    255 | 9. Secretaria da Fazenda Pública                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    117 | 9. Vara Cível                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     65 | 9. Vara Criminal                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    253 | 9. Vara da Fazenda Pública                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     66 | Administração do Fórum                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    277 | Alfa Engenharia de Informática                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    132 | Almoxarifado TJ                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    245 | Ar                                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    242 | Arquivo                                                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    206 | Assessoria de Comunicação                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    107 | Assessoria de Informática da CGJ                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    112 | Assistência Técnica Externa                                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    141 | Associação Brasileira de Mulheres em Carreira Jurídica                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    241 | Associação dos Magistrados do Maranhão                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    160 | Auditoria da Justiça Militar                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     79 | Auditório                                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     67 | Avaliação                                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    246 | Barra do Corda                                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     68 | Biblioteca                                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    135 | Casa Civil                                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    290 | CEJUSC Saúde                                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    138 | Central de DPVAT - 1. Juizado Cível                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    273 | Central de Inq                                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     89 | Central de Inquéritos                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    111 | Central de Mandados                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    274 | Centro de apoio às vítimas de crimes violentos                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    288 | Centro de Conciliação e Mediação de Família                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    154 | Centro de Processamento de Dados Antigo                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    229 | Centro de Processamento de Dados Novo                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    151 | Comarca de Coelho Neto                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    279 | Comissão Sentenciante                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    234 | Conselho de Supervisão dos Juizados Especiais                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     70 | Contadoria Judicial                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    209 | COOMAMP                                                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    150 | Coordenação de Análise e Desenvolvimento                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    131 | Coordenação de Manutenção de Equipamentos                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    118 | Coordenação de Material e Patrimônio                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    155 | Coordenação do Mutirão Carcerário do Maranhão ? CNJ                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    137 | Coordenadoria de Orient, Fisc, Cor, Dis e Aval das Serventias                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    126 | Copa                                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    124 | Corredor Superior                                                                                    | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    123 | Corredor Térreo                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    106 | Corregedoria Justiça                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     71 | Defensoria Pública                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    148 | Depositário Público                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    130 | Depósito Público                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    166 | Devolvido para garantia                                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    136 | Diretoria Administrativa do TJ                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    110 | Diretoria CGJ                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    280 | Diretoria de Informatica do TJ                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     72 | Diretoria Fórum                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     73 | Distribuição                                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    128 | Distribuição Drive-in                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     83 | Divisão de Transporte                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    120 | Divisão de Administração Patrimonial                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    159 | Divisão de Arquivo                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     74 | Divisão de Informática                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    147 | Divisão de Material e Patrimônio - CGJ                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     81 | Divisão de Material e Patrimônio - Fórum                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     80 | Divisão de Serviço Social                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    105 | Divisão de Serviços Gerais                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     93 | Divisão Médica                                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    163 | Doação                                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    282 | Gabinete da Corregedoria Fórum                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    268 | Grupo do PJE                                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    247 | Imperatriz                                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    157 | Indefinido                                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     86 | Instituto Bem Viver - Creche Sonho Meu                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    249 | Itautec - MATEC                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    281 | Juízado Especial Cível e Criminal de Paço do Lumiar                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    265 | Juízado Especial Cível e Criminal de São José de Ribamar                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    250 | Juizado Especial da Fazenda Pública                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    146 | Juizado Especial de Bacabal                                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    174 | Juizado Especial de Transito                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    191 | Juizado Especial de Trânsito                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    295 | Laboratório de Inovação Tecnológica                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     75 | Laboratório Forense de Biologia Molecular                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    161 | Ministério Público                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    267 | Mutirão Carcerário                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    278 | Mutirão Vara da Mulher                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|      0 | Não informado                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    293 | NATJUS                                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    292 | NAUJ                                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    156 | Núcleo de Apoio a Justiça de 1o Grau                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    252 | Núcleo Permanente de Métodos Consensuais de Solução de Conflitos                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    275 | OKI do Brasil                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    271 | Ouvidoria                                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    207 | P.A.B.X                                                                                              | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     87 | Partidoria Judicial                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    210 | Plantão Judicial                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    244 | Plantão Judicial Criminal                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    127 | Porão                                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     97 | Posto Policial                                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     91 | Pré-Distribuição                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    269 | Procuradoria Geral do Estado                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    115 | Procuradoria Geral do Município                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    218 | Projeto Pai Presente                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    109 | Protocolo                                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    153 | Rack do 1 andar Ala 1                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    152 | Rack do 1 andar Ala 3                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    165 | Rack do 1 andar Ala 5                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    213 | Rack do 1 andar Ala 6                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    192 | Rack do 3 andar Ala 4                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    197 | Rack do 3 andar Ala 6                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    196 | Rack do 4 andar Ala 4                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    195 | Rack do 4 andar Ala 6                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    168 | Rack do 5 andar Ala 4                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    200 | Rack do 5 andar Ala 4                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    194 | Rack do 5 andar Ala 6                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    169 | Rack do 6 andar Ala 4                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    201 | Rack do 6 andar Ala 4                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    230 | Rack do 6 andar Ala 6                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    167 | Rack do 7 andar Ala 4                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    228 | Rack do 7 andar Ala 6                                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    236 | Rack do Térreo Ala 5                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    121 | Rack do Térreo Ala 6                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     77 | Recepção Fórum                                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    211 | Sala de CFTV                                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    276 | Sala de Custódia                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    208 | Sala de Detentos                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    284 | Sala de Vídeo Conferência                                                                            | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     78 | Sala dos Oficiais                                                                                    | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    125 | Sala Secreta                                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    199 | Salão do Júri 1                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    198 | Salão do Júri 2                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    202 | Salão do Júri 3                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    203 | Salão do Júri 4                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    248 | SANTA INÊS                                                                                           | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    122 | SEARHP                                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    113 | Secretaria de Interdição                                                                             | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    285 | Secretaria Judicial Única Digital da Fazenda Pública                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    240 | Secretaria Vara de Interesses Difusos e Coletivos                                                    | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    296 | SEJUD Cível                                                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    129 | SEMFAZ                                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    164 | SERT Engenharia                                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    251 | Setor Médico - JÚRI                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     82 | Setor Odontológico                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    270 | Sindicato da PGE                                                                                     | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     84 | Telefonista                                                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    272 | Telejudiciário                                                                                       | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    243 | TRE                                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    283 | Treinamento do PJE                                                                                   | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    176 | Tribunal de Justiça                                                                                  | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    204 | Turma Recursal Cível e Criminal                                                                      | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    291 | Vara Agrária                                                                                         | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    297 | Vara da Infância e Juventude e do Juizado Especial de Violência Doméstica e Familiar Contra a Mulher | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    289 | Vara da Saúde                                                                                        | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|     85 | Vara de Execuções Criminais                                                                          | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    114 | Vara de Interdição, Sucessão e Alvará                                                                | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    226 | Vara de Interesses Difusos e Coletivos                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    294 | Vara do Idoso e Registro Públicos                                                                    | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    134 | Vara Especial de Violência Doméstica                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    225 | Vara Especial do Idoso                                                                               | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
+|    262 | Vara única de Raposa                                                                                 | 2024-11-06 10:32:19 | 2024-11-06 10:32:19 |
++--------+------------------------------------------------------------------------------------------------------+---------------------+---------------------+

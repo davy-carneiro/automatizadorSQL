@@ -1,0 +1,53 @@
++----------+--------------+-----------------+----------------------+-----------+-------------+------------+
+| id_alias | fk_id_tabela | nome_coluna     | alias_c              | bol_ativo | chave_geral | pos_coluna |
++----------+--------------+-----------------+----------------------+-----------+-------------+------------+
+|        1 |            2 | id_grupo        | Grupos               |         1 |           7 |          1 |
+|        2 |            1 | id_atalho       | Código               |         1 |           7 |          1 |
+|        3 |            1 | titulo          | Título               |         1 |           7 |          2 |
+|        4 |            2 | titulo          | Título               |         1 |           7 |          2 |
+|        5 |            2 | sigla           | Abreviação           |         1 |           7 |          3 |
+|        6 |            3 | cod_item        | Código               |         1 |           7 |          1 |
+|        7 |            3 | titulo          | Título               |         1 |           7 |          2 |
+|        8 |            3 | url             | Endereço             |         1 |           7 |          4 |
+|        9 |            3 | bol_ativo       | Ativo                |         1 |           7 |          5 |
+|       10 |            4 | cod_menu        | Código               |         1 |           7 |          1 |
+|       11 |            4 | titulo          | Título               |         1 |           7 |          2 |
+|       12 |            4 | bol_ativo       | Ativo                |         1 |           7 |          4 |
+|       13 |            5 | cod_noticia     | Código               |         1 |           7 |          1 |
+|       14 |            5 | titulo          | Título               |         1 |           7 |          2 |
+|       15 |            5 | url             | Endereço             |         1 |           7 |          4 |
+|       16 |            5 | date_           | Data da notícia      |         1 |           7 |          5 |
+|       17 |            5 | url_imagem      | Caminho do arquivo   |         1 |           7 |          7 |
+|       18 |            5 | desc_imagem     | Descrição do arquivo |         1 |           7 |          3 |
+|       19 |            5 | tamanho_noticia | Tamanho da notícia   |         1 |           7 |          8 |
+|       20 |            5 | bol_ativo       | Ativo                |         1 |           7 |          9 |
+|       21 |            6 | cod_servico     | Código               |         1 |           7 |          1 |
+|       22 |            6 | titulo          | Título               |         1 |           7 |          2 |
+|       23 |            6 | subtitulo       | Subtítulo            |         1 |           7 |          3 |
+|       24 |            6 | url             | Endereço             |         1 |           7 |          4 |
+|       25 |            6 | bol_ativo       | Ativo                |         1 |           7 |          6 |
+|       26 |            1 | atalhositem     | Menu de Atalhos      |         1 |           7 |          0 |
+|       27 |            2 | grupojudicial   | Grupos Judiciais     |         1 |           7 |          0 |
+|       28 |            3 | itemmenu        | Itens dos Menus      |         1 |           7 |          0 |
+|       29 |            4 | menugrupo       | Menus                |         1 |           7 |          0 |
+|       30 |            5 | noticiagrupo    | Notícias             |         1 |           7 |          0 |
+|       31 |            6 | servicogrupo    | Serviços             |         1 |           7 |          0 |
+|       32 |            1 | fk_cod_item     | Código do item       |         1 |           7 |          3 |
+|       33 |            1 | chave_geral     | Chave geral          |         0 |           7 |          0 |
+|       34 |            2 | chave_geral     | Chave geral          |         0 |           7 |          0 |
+|       35 |            3 | fk_cod_menu     | Menu pertencente     |         1 |           7 |          3 |
+|       36 |            3 | chave_geral     | Chave geral          |         0 |           7 |          0 |
+|       37 |            4 | fk_id_grupo     | Grupo pertencente    |         1 |           7 |          3 |
+|       38 |            4 | chave_geral     | Chave geral          |         0 |           7 |          0 |
+|       39 |            5 | fk_id_grupo     | Grupo pertencente    |         1 |           7 |          6 |
+|       40 |            5 | chave_geral     | Chave geral          |         0 |           7 |          0 |
+|       41 |            6 | fk_id_grupo     | Grupo pertencente    |         1 |           7 |          5 |
+|       42 |            6 | chave_geral     | Chave geral          |         0 |           7 |          0 |
+|       43 |            7 | id_alias        | Código do alias      |         0 |           7 |          0 |
+|       44 |            7 | fk_id_tabela    | Tabela pertencente   |         1 |           7 |          1 |
+|       45 |            7 | nome_coluna     | Nome da coluna       |         0 |           7 |          0 |
+|       46 |            7 | alias           | Apelidos             |         1 |           7 |          0 |
+|       47 |            7 | bol_ativo       | Ativo                |         0 |           7 |          3 |
+|       48 |            7 | chave_geral     | Chave geral          |         0 |           7 |          0 |
+|       49 |            7 | alias_c         | Título da coluna     |         1 |           7 |          2 |
++----------+--------------+-----------------+----------------------+-----------+-------------+------------+
